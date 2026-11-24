@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="__THEME__" style="--code-pattern: url('data:image/png;base64,__CODE_TEXTURE__')">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'nonce-__SCRIPT_NONCE__'; img-src data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Rvlc Tweaks</title>
+  <!-- STYLE -->
+</head>
+<body>
+  <div class="code-backdrop" aria-hidden="true">
+    <span class="code-stream"></span>
+    <span class="code-stream"></span>
+    <span class="code-stream"></span>
+  </div>
+  <header class="masthead">
+    <div class="header-inner">
+      <button type="button" class="brand" data-tab="tutorial" aria-label="Rvlc Tweaks, ir para Tutorial">
+        <img alt="" src="data:image/png;base64,__LOGO__"><strong>Rvlc <span>Tweaks</span></strong>
+      </button>
+      <div class="header-tools">
+        <div class="theme-picker" role="group" aria-label="Tema">
+          <button type="button" data-theme-choice="light" aria-pressed="false" title="Tema claro"><i class="icon" data-icon="sun"></i><span>Claro</span></button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false" title="Tema escuro"><i class="icon" data-icon="moon"></i><span>Escuro</span></button>
+        </div>
+        <button type="button" class="subtle history-link" data-tab="history"><span class="nav-emoji" aria-hidden="true">🕘</span><span>Histórico</span></button>
+      </div>
+    </div>
+    <nav class="top-nav" id="top-nav" aria-label="Navegação principal">
+      <span class="nav-indicator" id="nav-indicator" aria-hidden="true" hidden></span>
+      <div class="nav-group" role="group" aria-labelledby="nav-start">
+        <span class="nav-label" id="nav-start">Início</span>
+        <div class="nav-links">
+          <button type="button" class="nav-btn" data-tab="tutorial" aria-current="page"><span class="nav-emoji" aria-hidden="true">📖</span><span>Tutorial</span></button>
+          <button type="button" class="nav-btn" data-tab="optimize"><span class="nav-emoji" aria-hidden="true">🚀</span><span>Otimização</span></button>
+        </div>
+      </div>
+      <div class="nav-group" role="group" aria-labelledby="nav-devices">
+        <span class="nav-label" id="nav-devices">Dispositivos</span>
+        <div class="nav-links">
+          <button type="button" class="nav-btn" data-tab="mouse"><span class="nav-emoji" aria-hidden="true">🖱️</span><span>Mouse</span></button>
+          <button type="button" class="nav-btn" data-tab="monitor"><span class="nav-emoji" aria-hidden="true">🖥️</span><span>Monitor</span></button>
+          <button type="button" class="nav-btn" data-tab="gpu"><span class="nav-emoji" aria-hidden="true">🎮</span><span>GPU NVIDIA</span></button>
+        </div>
+      </div>
+      <div class="nav-group" role="group" aria-labelledby="nav-system">
+        <span class="nav-label" id="nav-system">Sistema</span>
+        <div class="nav-links">
+          <button type="button" class="nav-btn" data-tab="cleanup"><span class="nav-emoji" aria-hidden="true">🧹</span><span>Limpeza</span></button>
+          <button type="button" class="nav-btn" data-tab="power"><span class="nav-emoji" aria-hidden="true">⚡</span><span>Planos de energia</span></button>
+        </div>
+      </div>
+      <div class="nav-group" role="group" aria-labelledby="nav-terminals">
+        <span class="nav-label" id="nav-terminals">Terminais</span>
+        <div class="nav-links">
+          <button type="button" class="nav-btn" data-tab="powershell"><span class="nav-emoji" aria-hidden="true">💻</span><span>PowerShell</span></button>
+          <button type="button" class="nav-btn" data-tab="cmd"><span class="nav-emoji" aria-hidden="true">⌨️</span><span>CMD</span></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="content">
+    <section id="page-tutorial" class="page tutorial" aria-labelledby="tutorial-heading" data-progress="__TUTORIAL_PROGRESS__">
+      <header class="tutorial-header">
+        <div><h1 id="tutorial-heading">Tutorial</h1><p id="tutorial-position">Etapa 1 de 23</p></div>
+        <div class="tutorial-progress"><label for="tutorial-meter" id="tutorial-count">0 de 23 concluídas</label><progress id="tutorial-meter" value="0" max="23"></progress></div>
+      </header>
+      <div class="tutorial-layout">
+        <article class="tutorial-step" aria-labelledby="tutorial-title">
+          <h2 id="tutorial-title" tabindex="-1"></h2>
+          <p class="tutorial-intro" id="tutorial-intro"></p>
+          <div class="tutorial-items" id="tutorial-items"></div>
+          <p class="tutorial-note" id="tutorial-note" hidden></p>
+          <div class="tutorial-buttons">
+            <button type="button" class="secondary" id="tutorial-back">Voltar</button>
+            <button type="button" class="subtle" id="tutorial-skip">Pular por enquanto</button>
+            <button type="button" class="primary" id="tutorial-next">Concluir e avançar <i class="icon" data-icon="arrow"></i></button>
+          </div>
+          <p class="tutorial-feedback" id="tutorial-feedback" aria-live="polite"></p>
+        </article>
+        <figure class="tutorial-visual">
+          <img id="tutorial-image" width="620" height="290" alt="">
+          <figcaption><strong>Como abrir</strong><ol id="tutorial-route"></ol></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="showcase" id="showcase" data-dashboard="false" hidden>
+    <section class="hero" id="hero" data-variant="chip" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Seu PC em foco</h1>
+        <p id="hero-text">Veja seus componentes em 3D e encontre os ajustes que fazem sentido para a sua máquina.</p>
+        <div class="hero-actions">
+          <button type="button" class="primary" id="hero-action" data-analyze>Analisar PC</button>
+          <div id="page-cleanup" class="page cleanup-downloads" role="group" aria-label="Arquivos de limpeza" hidden>
+            <div class="file-row">
+              <span class="tile mint"><i class="icon" data-icon="file" aria-hidden="true"></i></span>
+              <h2>ResetCacheSystem.bat</h2>
+              <button type="button" class="secondary" data-action="get-reset-cache" aria-label="Baixar ResetCacheSystem.bat"><i class="icon" data-icon="download" aria-hidden="true"></i> Baixar</button>
+            </div>
+            <div class="file-row">
+              <span class="tile mint"><i class="icon" data-icon="file" aria-hidden="true"></i></span>
+              <h2>1._Limpar_Arquivos_de_Lixo.bat</h2>
+              <button type="button" class="secondary" data-action="get-cleanup-bat" aria-label="Baixar 1._Limpar_Arquivos_de_Lixo.bat"><i class="icon" data-icon="download" aria-hidden="true"></i> Baixar</button>
+            </div>
+          </div>
+          <div class="page" id="page-mouse" hidden><button type="button" class="primary" data-action="mouse">Configurações adicionais do mouse <i class="icon" data-icon="external"></i></button></div>
+          <div class="page" id="page-monitor" hidden><button type="button" class="primary" data-action="t-display">Abrir configurações avançadas de tela <i class="icon" data-icon="external"></i></button></div>
+        </div>
+        <div class="component-selector" id="component-selector" role="group" aria-label="Componente em 3D">
+          <button type="button" data-component="cpu" aria-pressed="true">CPU</button>
+          <button type="button" data-component="gpu" aria-pressed="false">GPU</button>
+          <button type="button" data-component="ram" aria-pressed="false">RAM</button>
+          <button type="button" data-component="disk" aria-pressed="false">Disco</button>
+        </div>
+      </div>
+      <div class="stage" id="stage">
+        <canvas id="model" tabindex="0" role="img" aria-label="Processador em 3D" aria-describedby="model-guide"></canvas>
+        <div class="model-caption" id="model-caption"><strong id="model-name">Processador</strong><span id="model-detail">Visualização em 3D</span></div>
+        <div class="model-tools">
+          <span id="model-guide"><i class="icon" data-icon="rotate"></i> Arraste para girar</span>
+          <button type="button" class="reset" id="reset-model" aria-label="Restaurar a vista 3D" title="Restaurar a vista 3D"><i class="icon" data-icon="reset"></i></button>
+        </div>
+      </div>
+    </section>
+    <aside class="recommendations" id="recommendations" aria-labelledby="recommendations-heading">
+      <h2 id="recommendations-heading">Ajustes indicados</h2>
+      <div class="recommendation-list" id="recommendation-list"><p class="empty">Coletando informações do PC…</p></div>
+    </aside>
+    </div>
+
+    <section id="page-optimize" class="page" aria-labelledby="optimize-heading" hidden>
+      <div class="section-head"><h2 id="optimize-heading">Monitoramento do PC</h2><span class="monitor-state" id="monitor-state">Coletando dados</span></div>
+      <div class="metrics" aria-label="Uso de recursos do Windows">
+        <article class="metric"><h3>Processador</h3><span class="metric-value" id="cpu-value">—</span><progress id="cpu-meter" aria-label="Uso do processador" max="100" value="0"></progress></article>
+        <article class="metric"><h3>Memória RAM</h3><span class="metric-value" id="ram-value">—</span><progress id="ram-meter" aria-label="Uso da memória RAM" max="100" value="0"></progress></article>
+        <article class="metric"><h3 id="disk-title">Disco do Windows</h3><span class="metric-value" id="disk-value">—</span><progress id="disk-meter" aria-label="Uso do disco do Windows" max="100" value="0"></progress></article>
+      </div>
+      <div class="insights-grid">
+        <section class="insight-panel" aria-labelledby="usage-heading">
+          <div class="section-head"><h2 id="usage-heading">Uso recente</h2><span id="chart-range" class="monitor-state">Até 1 minuto</span></div>
+          <canvas id="usage-chart" role="img" aria-label="Histórico recente de uso da CPU e da memória RAM"></canvas>
+          <div class="chart-footer"><span class="chart-key cpu">CPU</span><span class="chart-key ram">RAM</span><span id="chart-status">Coletando dados</span></div>
+        </section>
+        <section class="insight-panel" aria-labelledby="components-heading">
+          <h2 id="components-heading">Componentes detectados</h2>
+          <dl class="inventory" id="inventory"><dt>Hardware</dt><dd>Consultando o Windows…</dd></dl>
+        </section>
+      </div>
+      <article class="action-row optimizer-row">
+        <span class="tile cyan"><i class="icon" data-icon="tools"></i></span>
+        <div class="row-copy"><h3>Optimizer</h3><p>Utilitário de ajustes do Windows de hellzerg. Versão 17.0.</p></div>
+        <div class="project-actions">
+          <button type="button" class="secondary" data-action="optimizer" aria-label="Abrir GitHub do Optimizer">GitHub <i class="icon" data-icon="external"></i></button>
+          <button type="button" class="primary" data-action="get-optimizer" aria-label="Baixar Optimizer"><i class="icon" data-icon="download"></i> Baixar EXE</button>
+        </div>
+      </article>
+      <div class="section-head optimize-adjustments"><h2>Ajustes do Windows</h2><button type="button" class="secondary" data-action="gamemode">Abrir Modo de Jogo <i class="icon" data-icon="external"></i></button></div>
+      <div class="action-row featured">
+        <span class="tile cyan"><i class="icon" data-icon="game"></i></span>
+        <div class="row-copy"><h3>Captura em segundo plano</h3><p>Desativa o Game DVR na sua conta. A gravação dos últimos segundos pode deixar de funcionar.</p><span class="state" id="capture-state">Consultando o Windows…</span></div>
+        <button type="button" class="primary" data-confirm="capture" id="apply-capture" disabled>Desativar captura</button>
+      </div>
+      <div class="card-grid">
+        <article class="mini-card"><span class="tile violet"><i class="icon" data-icon="chip"></i></span><div><h3>Preferência gráfica por app</h3><p>Escolha qual GPU cada jogo deve usar.</p></div><button type="button" class="secondary" data-action="graphics">Abrir gráficos <i class="icon" data-icon="external"></i></button></article>
+        <article class="mini-card"><span class="tile mint"><i class="icon" data-icon="history"></i></span><div><h3>Ponto de restauração</h3><p>Abra a Proteção do Sistema para criar um ponto.</p></div><button type="button" class="secondary" data-action="restore">Abrir proteção <i class="icon" data-icon="external"></i></button></article>
+      </div>
+    </section>
+
+    <section id="page-gpu" class="page" aria-labelledby="gpu-heading" hidden>
+      <div class="section-head"><h2 id="gpu-heading">Ferramentas para GPU NVIDIA</h2><button type="button" class="subtle" data-action="downloads"><i class="icon" data-icon="box"></i> Abrir Downloads</button></div>
+      <div class="card-grid gpu-tools">
+        <div class="gpu-stack">
+          <article class="mini-card download-card"><span class="tile mint"><i class="icon" data-icon="chip"></i></span><div><h3>NVIDIA Profile Inspector</h3><p>Edita perfis do driver NVIDIA por jogo. Arquivo enviado na versão 2.3.0.12.</p></div><button type="button" class="primary" data-action="get-nvidia" aria-label="Baixar NVIDIA Profile Inspector"><i class="icon" data-icon="download"></i> Baixar EXE</button></article>
+          <section class="gpu-files" id="gpu-profiles" aria-labelledby="gpu-profiles-heading">
+            <h3 id="gpu-profiles-heading">Perfis do driver (.nip)</h3>
+            <div class="file-row"><span class="tile mint"><i class="icon" data-icon="file"></i></span><div><h3>RTX 30,40.nip</h3><p>Perfil base do driver. Exporte seu perfil atual antes de importar.</p></div><button type="button" class="secondary" data-action="get-rtx-nip" aria-label="Baixar RTX 30,40.nip">Baixar</button></div>
+            <div class="file-row"><span class="tile mint"><i class="icon" data-icon="file"></i></span><div><h3>GTX 20 _ below.nip</h3></div><button type="button" class="secondary" data-action="get-gtx-nip" aria-label="Baixar GTX 20 _ below.nip">Baixar</button></div>
+            <div class="file-row"><span class="tile mint"><i class="icon" data-icon="file"></i></span><div><h3>Config_para_Desempenho.nip</h3></div><button type="button" class="secondary" data-action="get-performance-nip" aria-label="Baixar Config_para_Desempenho.nip">Baixar</button></div>
+            <div class="file-row"><span class="tile mint"><i class="icon" data-icon="file"></i></span><div><h3>rvs.nip</h3></div><button type="button" class="secondary" data-action="get-rvs-nip" aria-label="Baixar rvs.nip">Baixar</button></div>
+          </section>
+        </div>
+        <div class="gpu-stack">
+          <article class="mini-card download-card"><span class="tile violet"><i class="icon" data-icon="bolt"></i></span><div><h3>MSI Utility v3</h3><p>Consulte a publicação do autor e confira a compatibilidade da placa antes de alterar o modo de interrupção.</p></div><button type="button" class="secondary" data-action="msi" aria-label="Abrir página do MSI Utility v3">Página do autor <i class="icon" data-icon="external"></i></button></article>
+          <section class="gpu-files" id="gpu-tweaks" aria-labelledby="gpu-tweaks-heading">
+            <h3 id="gpu-tweaks-heading">Arquivos de otimização da placa</h3>
+            <div class="file-row"><span class="tile violet"><i class="icon" data-icon="file"></i></span><div><h3>NVIDIA.reg</h3><p>Altera ajustes de energia e do driver no Registro. Abra como texto para revisar.</p></div><button type="button" class="secondary" data-action="get-nv-reg" aria-label="Baixar NVIDIA.reg">Baixar</button></div>
+            <div class="file-row"><span class="tile cyan"><i class="icon" data-icon="file"></i></span><div><h3>Optimizacao_da_NVIDIA.bat</h3><p>Usa WMIC e pode alterar outros adaptadores PCI de vídeo.</p></div><button type="button" class="secondary" data-action="get-nv-bat" aria-label="Baixar Optimizacao_da_NVIDIA.bat">Baixar</button></div>
+          </section>
+        </div>
+      </div>
+      <button type="button" class="subtle inline-link" data-action="inspector">Ver versões oficiais do Profile Inspector <i class="icon" data-icon="external"></i></button>
+    </section>
+
+    <section id="page-powershell" class="page" aria-labelledby="powershell-heading" hidden>
+      <h2 id="powershell-heading">Projetos para PowerShell</h2>
+      <div class="card-grid">
+        <article class="mini-card project-card">
+          <span class="tile cyan"><i class="icon" data-icon="terminal"></i></span>
+          <div><h3>Chris Titus Tech WinUtil</h3><code class="command-line" id="winutil-url">__WINUTIL_URL__</code></div>
+          <div class="project-actions">
+            <button type="button" class="primary" data-copy="winutil" aria-label="Copiar link WinUtil"><i class="icon" data-icon="file"></i> Copiar link</button>
+            <button type="button" class="secondary" data-action="winutil" aria-label="Abrir GitHub do WinUtil">GitHub <i class="icon" data-icon="external"></i></button>
+          </div>
+        </article>
+        <article class="mini-card project-card">
+          <span class="tile violet"><i class="icon" data-icon="terminal"></i></span>
+          <div><h3>Windows10Debloater</h3><code class="command-line" id="debloater-url">__DEBLOATER_URL__</code><p>Projeto arquivado para Windows 10.</p></div>
+          <div class="project-actions">
+            <button type="button" class="primary" data-copy="debloater" aria-label="Copiar link Windows10Debloater"><i class="icon" data-icon="file"></i> Copiar link</button>
+            <button type="button" class="secondary" data-action="debloater" aria-label="Abrir GitHub do Windows10Debloater">GitHub <i class="icon" data-icon="external"></i></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="page-power" class="page" aria-labelledby="power-heading" hidden>
+      <div class="section-head"><h2 id="power-heading">Planos instalados</h2><button type="button" class="subtle" data-action="plan-list"><i class="icon" data-icon="reset"></i> Atualizar</button></div>
+      <fieldset class="plans" id="plan-list"><legend class="visually-hidden">Selecione um plano de energia</legend><p class="empty">Consultando o Windows…</p></fieldset>
+      <div class="plan-footer"><button type="button" class="secondary" data-action="plan-import"><i class="icon" data-icon="file"></i> Importar arquivo .pow</button><button type="button" class="primary" data-confirm="plan-apply" id="apply-plan" disabled><i class="icon" data-icon="check"></i> Aplicar plano</button></div>
+    </section>
+
+    <section id="page-cmd" class="page" aria-labelledby="cmd-heading" hidden>
+      <div class="section-head service-heading">
+        <div><h2 id="cmd-heading">FiveM</h2><p>Consulte e gerencie os serviços do Windows listados abaixo.</p></div>
+        <button type="button" class="secondary" data-action="service-list"><i class="icon" data-icon="reset"></i> Atualizar status</button>
+      </div>
+      <div class="service-list" id="service-list"><p class="empty">Consultando os serviços do Windows…</p></div>
+    </section>
+
+    <section id="page-history" class="page plain" aria-labelledby="history-heading" hidden>
+      <h1 id="history-heading">Histórico</h1><p class="intro">Desfaça o ajuste de captura ou recupere arquivos movidos para a quarentena.</p>
+      <div class="history">
+        <div class="history-top"><h2>Alterações recentes</h2><button type="button" class="secondary" data-confirm="undo" id="undo-button" disabled><i class="icon" data-icon="reset"></i> Desfazer última ação</button></div>
+        <div id="history-list"><p class="empty">Carregando histórico…</p></div>
+      </div>
+      <button type="button" class="subtle inline-link" id="old-history" data-action="legacy" hidden>Ver pasta da versão anterior <i class="icon" data-icon="external"></i></button>
+    </section>
+  </main>
+  <div class="status" id="status" hidden>
+    <div class="status-message" id="status-message" role="status" aria-live="polite"></div>
+    <button type="button" class="subtle" id="download-folder" data-action="downloads" hidden>Abrir Downloads</button>
+    <button type="button" class="bare" id="dismiss-status" aria-label="Fechar mensagem"><i class="icon" data-icon="close"></i></button>
+  </div>
+  <dialog id="confirm" aria-labelledby="dialog-title" aria-describedby="dialog-detail">
+    <form method="dialog">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-detail"></p>
+      <label class="dialog-choice" id="service-auto-choice" hidden><input type="checkbox" id="service-auto"> Iniciar automaticamente com o Windows</label>
+      <div class="dialog-actions"><button type="submit" class="secondary" value="cancel" autofocus>Cancelar</button><button type="submit" class="primary" value="apply" id="dialog-apply">Aplicar</button></div>
+    </form>
+  </dialog>
+  <!-- DEPTH -->
+  <!-- SCENE -->
+  <!-- ANALYSIS -->
+  <!-- TUTORIAL DATA -->
+  <!-- TUTORIAL -->
+  <!-- APP -->
+</body>
+</html>

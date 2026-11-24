@@ -1,0 +1,72 @@
+RVLC TWEAKS
+
+Requisitos
+Windows 10 ou 11 de 64 bits em processador Intel ou AMD.
+A interface usa o Microsoft Edge WebView2 Evergreen. Se estiver ausente, o
+aplicativo oferece a página oficial da Microsoft para instalação.
+
+Como usar
+Feche a versão anterior do Rvlc Tweaks antes de abrir o novo executável.
+Esta versão está sem assinatura Authenticode do publicador.
+
+- Otimização. Abra o Modo de Jogo, ajuste a captura em segundo plano ou
+  consulte as configurações gráficas.
+  Analisar PC identifica o processador, as GPUs, a memória e o disco do
+  Windows conforme as informações que o sistema disponibiliza. O painel
+  mostra a ocupação do disco e as leituras de CPU e RAM. Ajustes indicados
+  usa essas informações para sugerir ações que você pode abrir e avaliar.
+  Os seletores CPU, GPU, RAM e Disco alternam as ilustrações 3D.
+  O cartão do Optimizer oferece o GitHub de hellzerg e o download oficial.
+- Mouse. Abra as configurações adicionais do Windows para ajustar o ponteiro.
+- Monitor. Clique em Abrir configurações avançadas de tela para selecionar
+  o monitor e a taxa de atualização (Hz). No Windows 11 24H2 ou mais
+  recente, o botão usa o atalho direto. Se o Windows abrir Sistema > Tela,
+  selecione Tela avançada nessa página.
+- Limpeza. Baixe ResetCacheSystem.bat e 1._Limpar_Arquivos_de_Lixo.bat.
+  Os botões salvam cópias dos arquivos originais em Downloads.
+- GPU NVIDIA. Baixe o NVIDIA Profile Inspector 2.3.0.12. O cartão do MSI
+  Utility v3 abre a publicação do autor.
+  Em Perfis do driver, baixe RTX 30,40.nip, GTX 20 _ below.nip,
+  Config_para_Desempenho.nip ou rvs.nip.
+  Em Arquivos de otimização da placa, baixe NVIDIA.reg e
+  Optimizacao_da_NVIDIA.bat. O aplicativo apenas salva os arquivos.
+- PowerShell. Abra o projeto no GitHub ou copie o endereço da publicação.
+  O cartão do Windows10Debloater indica que o projeto foi arquivado.
+- Planos de energia. Selecione um plano instalado e confirme Aplicar plano.
+  Importar arquivo .pow adiciona um plano à lista para aplicar quando quiser.
+- CMD. Na seção FiveM, consulte o estado de DPS, DiagTrack, PcaSvc e SysMain.
+  Use Iniciar e escolha se o serviço deve ter inicialização automática.
+  O SysMain também oferece a opção Parar. Gire o terminal 3D com o mouse.
+- Tutorial. A primeira aba abre na etapa em que você parou. Expanda uma
+  orientação para ver as instruções e os atalhos. Use Concluir e avançar, Voltar ou Pular por
+  enquanto. O progresso fica salvo neste usuário do Windows. Na última etapa,
+  o botão de capturas abre Imagens\Rvlc Tweaks com uma pasta por jogo.
+
+O Optimizer é baixado do GitHub por HTTPS e conferido pela soma SHA-256.
+Os downloads ficam na pasta Downloads. O app associa a marca de origem
+do Windows se o sistema de arquivos aceitar essa informação.
+
+Nas abas com modelos 3D, gire o modelo com o mouse ou as setas do teclado.
+O botão no canto do modelo restaura a vista inicial.
+As animações dos modelos respeitam a preferência de movimento reduzido.
+O fundo de código aparece nos temas Claro e Escuro e também respeita essa
+preferência do Windows.
+
+Tema, progresso do Tutorial e histórico ficam protegidos pela conta do
+Windows (DPAPI) em %LOCALAPPDATA%\Rvlc Tweaks. Use essa mesma conta para
+continuar usando os dados protegidos.
+
+Código-fonte
+A pasta codigo-fonte contém o programa Go, a interface em HTML, CSS e
+JavaScript, e os arquivos que o aplicativo entrega na pasta Downloads.
+
+Para recompilar esta publicação com Go 1.27.4, execute em codigo-fonte
+no Windows AMD64:
+    go build -trimpath -ldflags="-H windowsgui -s -w" -o Rvlc-Tweaks.exe .
+
+Para recompilar o ícone e o manifesto:
+    go run github.com/akavel/rsrc@v0.10.2 -arch amd64 -ico app.ico -manifest app.manifest -o app_windows_amd64.syso
+
+As licenças dos componentes redistribuídos estão na pasta licencas.
+O NVIDIA Profile Inspector corresponde à publicação oficial 2.3.0.12.
+    https://github.com/Orbmu2k/nvidiaProfileInspector/releases/tag/2.3.0.12
